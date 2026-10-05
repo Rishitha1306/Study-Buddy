@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study Buddy AI</title>
+</head>
+
+<body>
+
+    <h1>📚 Study Buddy AI</h1>
+
+    <p>Your personal AI learning assistant</p>
+
+    <h2>What do you want to study?</h2>
+
+    <textarea id="question" rows="5" cols="50"
+        placeholder="Enter your question here..."></textarea>
+
+    <br><br>
+
+    <button onclick="getAnswer()">Ask Study Buddy</button>
+
+    <h3>Answer:</h3>
+
+    <p id="answer">Your answer will appear here.</p>
+
+    <script>
+        function getAnswer() {
+            let question = document.getElementById("question").value;
+
+            if (question == "") {
+                document.getElementById("answer").innerText =
+                    "Please enter a question.";
+            } else {
+                document.getElementById("answer").innerText =
+                    "Study Buddy received your question: " + question;
+            }
+        }
+    </script>
+
+</body>
+</html>
